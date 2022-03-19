@@ -2,16 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class FollowPlayer2 : MonoBehaviour
 {
     public GameObject player;
-    private Vector3 offset;
+    private Vector3 offset = new Vector3(0, 4.8f, -1);
 
-    void Start()
-    {
-       offset = transform.position - player.transform.position;
-    }
-
+    // Update is called once per frame
     void LateUpdate()
     {
         //Offset the camera behind the player by additing to the player's position
