@@ -5,9 +5,13 @@ using UnityEngine;
 public class FollowPlayer2 : MonoBehaviour
 {
     public GameObject player;
-    private Vector3 offset = new Vector3(0, 4.8f, -1);
+    private Vector3 offset;
 
-    // Update is called once per frame
+    void Start()
+    {
+        offset = transform.position - player.transform.position;
+    }
+
     void LateUpdate()
     {
         //Offset the camera behind the player by additing to the player's position
